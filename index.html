@@ -21,10 +21,8 @@
         }
 
         .blurBg {
-            background-color: rgba(249, 247, 243, 0.7);
-            /* Transparent version of #F9F7F3 */
+            background-color: rgba(249, 247, 243, 0.6);
             backdrop-filter: blur(10px);
-            /* Apply blur */
         }
     </style>
 </head>
@@ -35,22 +33,22 @@
         <header class="blurBg backdrop-blur-lg p-3">
             <nav class="max-w-[1440px] mx-auto flex items-center justify-between">
                 <a href="blog.html">
-                    <button class="btn bg-[#B4F461] font-semibold text-xl">Blog</button>
+                    <button class="btn md:btn-md btn-sm bg-[#B4F461] font-semibold">Blog</button>
                 </a>
-                <div class="flex gap-4 items-center">
+                <div class="md:flex hidden md:gap-4 gap-2 items-center ">
                     <img src="./assets/logo.png" alt="log">
-                    <p class="text-xl font-semibold">Donate Bangladesh</p>
+                    <p class="font-semibold">Donate Bangladesh</p>
                 </div>
-                <div class="flex gap-4 items-center">
-                    <img src="./assets/coin.png" alt="Coin">
-                    <p class="text-xl font-semibold"><span id="mainTk">5500</span> BDT</p>
+                <div class="flex md:gap-4 gap-1 items-center">
+                    <img class="md:w-0 md:h-0 w-7 h-7" src="./assets/coin.png" alt="Coin">
+                    <p class="text-sm font-semibold"><span id="mainTk">5500</span> BDT</p>
                 </div>
             </nav>
         </header>
         <!-- banner btn section  -->
         <div class="p-3 flex gap-10 items-center justify-center max-w-[1440px] mx-auto sticky top-24">
-            <button id="donationBtn" class="btn bg-[#B4F461] font-semibold">Donation</button>
-            <button id="histroyBtn" class="btn font-semibold text-gray-500">History</button>
+            <button id="donationBtn" class="btn md:btn-md btn-sm bg-[#B4F461] font-semibold">Donation</button>
+            <button id="histroyBtn" class="btn md:btn-md btn-sm font-semibold text-gray-500">History</button>
         </div>
     </div>
 
@@ -157,9 +155,6 @@
 
     <!-- history part  -->
     <section id="histroySeaction" class=" max-w-[1440px] mx-auto mt-5 mb-0 hidden">
-        <div id="histroyTitle">
-            <h1 class="flex items-center justify-center text-3xl text-red-500">Please Donate some tk 😉
-        </div>
         </h1>
         <div id="historyResultContainer" class="p-10 space-y-3">
             <!-- history result here  -->

@@ -9,7 +9,6 @@ const getInputToValue = (id) => {
 let mainTk = getInnerTextToValue('mainTk').toFixed(2)
 let modal = document.getElementById('my_modal_1')
 const historyResultContainer = document.getElementById('historyResultContainer')
-
 // noakhali section
 const noakhaliBtn = document.getElementById('noakhaliBtn')
 noakhaliBtn.addEventListener('click', () => {
@@ -97,28 +96,26 @@ protestBtn.addEventListener('click', () => {
     historyResultContainer.prepend(createDiv)
 })
 
-
 // toggle and switch option donation and history button
+const mainSection = document.getElementById('mainSection')
+const histroySeaction = document.getElementById('histroySeaction')
 const donationBtn = document.getElementById('donationBtn')
 const histroyBtn = document.getElementById('histroyBtn')
-const histroySeaction = document.getElementById('histroySeaction')
-const mainSection = document.getElementById('mainSection')
 
-donationBtn.addEventListener('click', (e) => {
-    mainSection.style.display = 'block'
-    donationBtn.classList.add('bg-[#B4F461]', 'text-black')
-    histroyBtn.classList.remove('bg-[#B4F461]', 'text-black')
 
-    document.getElementById('histroyTitle').classList.add('hidden')
-})
-histroyBtn.addEventListener('click', (e) => {
+
+histroyBtn.addEventListener('click', () => {
+    mainSection.classList.add('hidden')
     histroySeaction.classList.remove('hidden')
-    mainSection.style.display = 'none'
+
     histroyBtn.classList.add('bg-[#B4F461]', 'text-black')
     donationBtn.classList.remove('bg-[#B4F461]', 'text-black')
 
-    if (historyResultContainer.childElementCount > 0) {
-        document.getElementById('histroyTitle').classList.remove('hidden')
-    }
 })
+donationBtn.addEventListener('click', () => {
+    histroySeaction.classList.add('hidden')
+    mainSection.classList.remove('hidden')
 
+    donationBtn.classList.add('bg-[#B4F461]', 'text-black')
+    histroyBtn.classList.remove('bg-[#B4F461]', 'text-black')
+})
