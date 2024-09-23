@@ -39,14 +39,14 @@
         </header>
         <!-- banner btn section  -->
         <div class="p-3 flex gap-10 items-center justify-center max-w-[1440px] mx-auto sticky top-24">
-            <button class="btn bg-[#B4F461] font-semibold">Donation</button>
-            <button class="btn hover:bg-[#B4F461] hover:text-black font-semibold text-gray-500">History</button>
+            <button id="donationBtn" class="btn bg-[#B4F461] font-semibold">Donation</button>
+            <button id="histroyBtn" class="btn font-semibold text-gray-500">History</button>
         </div>
     </div>
 
 
     <!-- main donation section  -->
-    <main class="max-w-[1440px] mx-auto">
+    <main class="max-w-[1440px] mx-auto " id="mainSection">
         <!-- noakhali  -->
         <div class="p-10">
             <div class="flex justify-between gap-10 pt-10 p-5 bg-gray-50 rounded-xl shadow-md hover:shadow-xl">
@@ -81,7 +81,7 @@
                 <div class="space-y-6 w-1/2">
                     <button class="btn">
                         <img class="" src="./assets/coin.png" alt="">
-                        <span>600</span>
+                        <span id="feniDonateTk">600</span>
                         BDT
                     </button>
                     <p class="text-xl font-semibold">Donate for Flood Relief in Feni,Bangladesh</p>
@@ -91,13 +91,14 @@
                         offer crucial support and help rebuild lives in the aftermath of this disaster. Every
                         contribution counts towards making a real difference. Please consider donating today to assist
                         those in urgent need.</p>
-                    <input class="input input-bordered w-full focus:outline-none text-xl" type="number" name="amount"
-                        id="" placeholder="Write Donation Amount">
-                    <button onclick="feniBtn(this)"
+                    <input class="input input-bordered w-full focus:outline-none text-xl" type="text" name="amount"
+                        id="feniInputFeild" placeholder="Write Donation Amount">
+                    <button id="feniBtn"
                         class="w-full py-2 rounded-lg bg-[#B4F461] text-xl font-semibold">Donation</button>
                 </div>
             </div>
         </div>
+
         <!-- Quota protest -->
         <div class="p-10">
             <div class="flex justify-between gap-10 pt-10 p-5 bg-gray-50 rounded-xl shadow-md hover:shadow-xl">
@@ -107,7 +108,7 @@
                 <div class="space-y-6 w-1/2">
                     <button class="btn">
                         <img class="" src="./assets/coin.png" alt="">
-                        <span>2400</span>
+                        <span id="protestDonationTk">2400</span>
                         BDT
                     </button>
                     <p class="text-xl font-semibold">Aid for Injured in the Quota Movement</p>
@@ -118,9 +119,9 @@
                         time. Every donation plays a vital role in alleviating their suffering and aiding in their
                         recovery. Please consider making a donation to support these brave individuals in their time of
                         need.</p>
-                    <input class="input input-bordered w-full focus:outline-none text-xl" type="number" name="amount"
-                        id="" placeholder="Write Donation Amount">
-                    <button onclick="protestBtn(this)"
+                    <input class="input input-bordered w-full focus:outline-none text-xl" type="text" name="amount"
+                        id="protestInputFeild" placeholder="Write Donation Amount">
+                    <button id="protestBtn"
                         class="w-full py-2 rounded-lg bg-[#B4F461] text-xl font-semibold">Donation</button>
                 </div>
             </div>
@@ -143,7 +144,15 @@
             </div>
         </dialog>
     </main>
+
+    <!-- history part  -->
+    <section id="histroySeaction" class=" max-w-[1440px] mx-auto mt-5 hidden">
+        <div id="historyResultContainer" class="p-10 space-y-3">
+            <!-- history result here  -->
+        </div>
+    </section>
+
     <script src="js/donation.js"></script>
 </body>
 
-</html>
+</html> 
