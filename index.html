@@ -19,14 +19,24 @@
             font-optical-sizing: auto;
             font-style: normal;
         }
+
+        .blurBg {
+            background-color: rgba(249, 247, 243, 0.7);
+            /* Transparent version of #F9F7F3 */
+            backdrop-filter: blur(10px);
+            /* Apply blur */
+        }
     </style>
 </head>
 
+
 <body class="lexend-font">
     <div class="sticky top-0 backdrop-blur-lg">
-        <header class="bg-[#F9F7F3] backdrop-blur-lg p-3">
+        <header class="blurBg backdrop-blur-lg p-3">
             <nav class="max-w-[1440px] mx-auto flex items-center justify-between">
-                <button class="btn bg-[#B4F461] font-semibold text-xl">Blog</button>
+                <a href="blog.html">
+                    <button class="btn bg-[#B4F461] font-semibold text-xl">Blog</button>
+                </a>
                 <div class="flex gap-4 items-center">
                     <img src="./assets/logo.png" alt="log">
                     <p class="text-xl font-semibold">Donate Bangladesh</p>
@@ -54,7 +64,7 @@
                     <img class="" src="./assets/noakhali.png" alt="">
                 </div>
                 <div class="space-y-6 w-1/2">
-                    <button class="btn">
+                    <button class="px-5 py-2 bg-gray-200 rounded-lg flex items-center gap-2">
                         <img class="" src="./assets/coin.png" alt="">
                         <span id="noakhaliDonateTk">0</span>
                         BDT
@@ -79,7 +89,7 @@
                     <img class="" src="./assets/feni.png" alt="">
                 </div>
                 <div class="space-y-6 w-1/2">
-                    <button class="btn">
+                    <button class="px-5 py-2 bg-gray-200 rounded-lg flex items-center gap-2">
                         <img class="" src="./assets/coin.png" alt="">
                         <span id="feniDonateTk">600</span>
                         BDT
@@ -106,7 +116,7 @@
                     <img class="" src="./assets/quota-protest.png" alt="">
                 </div>
                 <div class="space-y-6 w-1/2">
-                    <button class="btn">
+                    <button class="px-5 py-2 bg-gray-200 rounded-lg flex items-center gap-2">
                         <img class="" src="./assets/coin.png" alt="">
                         <span id="protestDonationTk">2400</span>
                         BDT
@@ -147,7 +157,8 @@
 
     <!-- history part  -->
     <section id="histroySeaction" class=" max-w-[1440px] mx-auto mt-5 hidden">
-        <h1 id="histroyTitle" class="flex items-center justify-center text-3xl text-red-500">Please Donate some tk 😉</h1>
+        <h1 id="histroyTitle" class="flex items-center justify-center text-3xl text-red-500">Please Donate some tk 😉
+        </h1>
         <div id="historyResultContainer" class="p-10 space-y-3">
             <!-- history result here  -->
         </div>
@@ -156,4 +167,4 @@
     <script src="js/donation.js"></script>
 </body>
 
-</html> 
+</html>
