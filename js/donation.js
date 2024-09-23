@@ -108,15 +108,17 @@ donationBtn.addEventListener('click', (e) => {
     mainSection.style.display = 'block'
     donationBtn.classList.add('bg-[#B4F461]', 'text-black')
     histroyBtn.classList.remove('bg-[#B4F461]', 'text-black')
-    document.getElementById('histroyTitle').style.display = 'none'
+
+    document.getElementById('histroyTitle').classList.add('hidden')
 })
 histroyBtn.addEventListener('click', (e) => {
     histroySeaction.classList.remove('hidden')
     mainSection.style.display = 'none'
     histroyBtn.classList.add('bg-[#B4F461]', 'text-black')
     donationBtn.classList.remove('bg-[#B4F461]', 'text-black')
+
     if (historyResultContainer.childElementCount > 0) {
-        document.getElementById('histroyTitle').style.display = 'none'
+        document.getElementById('histroyTitle').classList.remove('hidden')
     }
 })
 
