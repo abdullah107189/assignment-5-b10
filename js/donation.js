@@ -18,7 +18,7 @@ noakhaliBtn.addEventListener('click', () => {
     if (noakhaliInputTk > mainTk) {
         return alert('sorry not enough you TK')
     }
-    if (isNaN(noakhaliInputTk) || typeof (noakhaliInputTk) === false || noakhaliInputTk <=0) {
+    if (isNaN(noakhaliInputTk) || typeof (noakhaliInputTk) === false || noakhaliInputTk <= 0) {
         return alert('Please Enter Valid Amount')
     }
 
@@ -36,7 +36,7 @@ noakhaliBtn.addEventListener('click', () => {
 <p class="font-bold text-xl">${noakhaliInputTk} Taka is Donate for Flood at Noakhali, Bangladesh</p>
 <p>Date : ${now}</p>
     `
-    historyResultContainer.appendChild(createDiv)
+    historyResultContainer.prepend(createDiv)
 })
 
 // feni section 
@@ -65,7 +65,7 @@ feniBtn.addEventListener('click', () => {
 <p class="font-bold text-xl">${feniInputFeild} Taka is Donate for Flood Relief in Feni,Bangladesh</p>
 <p>Date : ${now}</p>
     `
-    historyResultContainer.appendChild(createDiv)
+    historyResultContainer.prepend(createDiv)
 })
 
 // protest section
@@ -94,7 +94,7 @@ protestBtn.addEventListener('click', () => {
 <p class="font-bold text-xl">${protestInputFeild} Taka is Aid for Injured in the Quota Movement</p>
 <p>Date : ${now}</p>
     `
-    historyResultContainer.appendChild(createDiv)
+    historyResultContainer.prepend(createDiv)
 })
 
 
@@ -114,5 +114,8 @@ histroyBtn.addEventListener('click', (e) => {
     mainSection.style.display = 'none'
     histroyBtn.classList.add('bg-[#B4F461]', 'text-black')
     donationBtn.classList.remove('bg-[#B4F461]', 'text-black')
+    if (historyResultContainer.childElementCount > 0) {
+        document.getElementById('histroyTitle').style.display = 'none'
+    }
 })
 
